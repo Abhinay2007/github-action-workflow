@@ -56,7 +56,7 @@ jobs:
 
       - name: Start Application
         run: |
-          cd /home/ubuntu/spring-demo
+          cd /home/abhinay/spring-demo
 
           RUNNER_TRACKING_ID="" nohup java -jar app.jar > app.log 2>&1 &
 
