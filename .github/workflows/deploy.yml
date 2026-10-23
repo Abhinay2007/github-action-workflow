@@ -38,21 +38,21 @@ jobs:
 
       - name: Stop Old Application
         run: |
-          if [ -f /home/ubuntu/spring-demo/app.pid ]; then
-            PID=$(cat /home/ubuntu/spring-demo/app.pid)
+          if [ -f /home/abhinay/spring-demo/app.pid ]; then
+            PID=$(cat /home/abhinay/spring-demo/app.pid)
 
             if kill -0 "$PID" 2>/dev/null; then
               kill "$PID"
               sleep 2
             fi
 
-            rm -f /home/ubuntu/spring-demo/app.pid
+            rm -f /home/abhinay/spring-demo/app.pid
           fi
 
       - name: Copy New Application
         run: |
-          mkdir -p /home/ubuntu/spring-demo
-          cp target/app.jar /home/ubuntu/spring-demo/app.jar
+          mkdir -p /home/abhinay/spring-demo
+          cp target/app.jar /home/abhinay/spring-demo/app.jar
 
       - name: Start Application
         run: |
